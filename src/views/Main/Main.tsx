@@ -9,12 +9,12 @@ import { SubmissionRecord } from "./models";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CodeSnippet = ({ code }: { code: string }) => {
+const CodeSnippet = ({ code, language }: { code: string, language?: string }) => {
 
   return (
     <div style={{ maxHeight: "80vh" }}>
       <SyntaxHighlighter
-        language="solidity"
+        language={language || "solidity"}
         style={oneDark}
         wrapLongLines
       >
@@ -73,7 +73,7 @@ const Main = () => {
       <ModalComponent
         isOpen={isModalOpen}
         size="lg"
-        content={<CodeSnippet code={selectedRows?.code || ""} />}
+        content={<CodeSnippet code={selectedRows?.code || ""} language={selectedRows?.language}  />}
         title="Submitted code"
         toggleModal={() => setIsModalOpen(false)}
       />

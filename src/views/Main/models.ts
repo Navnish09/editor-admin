@@ -4,4 +4,5 @@ export interface SubmissionRecord {
   name : string;
   email : string;
   code : string;
+  language : string
 }
