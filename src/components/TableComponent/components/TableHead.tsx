@@ -1,5 +1,5 @@
+import React from "react";
 import { Column } from "../models"
-
 
 // Component for rendering the table head
 export const TableHead = ({ columns }: { columns: Column[] }) => {

@@ -1,3 +1,4 @@
+import React from "react";
 import { CardSubtitle, CardTitle } from "reactstrap"
 import { Info } from "../models"
 

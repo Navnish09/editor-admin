@@ -8,7 +8,6 @@ import {
   Dropdown,
   Button,
 } from "reactstrap";
-import user1 from "../assets/images/users/user5.jpg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -53,7 +52,7 @@ const Header = () => {
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="dark">
             <img
-              src={user1}
+              src={`${process.env.PUBLIC_URL}/users/user5.jpg`}
               alt="profile"
               className="rounded-circle"
               width="30"

@@ -1,3 +1,4 @@
+import React from "react";
 import { Card, CardBody, Spinner, Table } from "reactstrap";
 import { TableBody, TableHead, TableInfo } from "./components";
 import { Props } from "./models";

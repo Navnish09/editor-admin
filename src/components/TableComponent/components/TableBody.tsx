@@ -1,3 +1,4 @@
+import React from "react";
 import { Props } from "../models";
 
 // Component for rendering the table body

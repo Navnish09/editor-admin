@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import React, { lazy } from "react";
 
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout"));

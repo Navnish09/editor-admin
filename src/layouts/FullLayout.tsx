@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "reactstrap";
 
 import Main from "../views/Main/Main";
