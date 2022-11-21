@@ -1,0 +1,37 @@
+{
+  "configs": {
+    "title": "Submissions",
+    "subtitle": "Code submissions by students"
+  },
+  "columns": [
+    {
+      "Header": "ID",
+      "accessor": "_id",
+      "width": 300,
+      "grow" : true
+    },
+    {
+      "Header": "Name",
+      "accessor": "name",
+      "width": 200,
+      "grow": true
+    },
+    {
+      "Header": "Email",
+      "accessor": "email",
+      "width": 250,
+      "grow": true
+    },
+    {
+      "Header": "Code",
+      "accessor": "code",
+      "width": 100,
+      "grow": true
+    },
+    {
+      "Header" : "Actions",
+      "accessor" : "actions",
+      "width": 95
+    }
+  ]
+}
