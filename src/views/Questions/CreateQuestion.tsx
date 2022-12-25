@@ -57,7 +57,8 @@ export const CreateQuestion = ({ onCreated }: Props) => {
       {
         questionId && (
           <Alert color="success">
-            {`${STATIC_CONTENT.question_created} : ${process.env.REACT_APP_EDITOR_BASE_URL}/${questionId}`}
+            {`${STATIC_CONTENT.question_created} :
+            ${process.env.REACT_APP_EDITOR_BASE_URL}/${questionId}`}
           </Alert>
         )
       }
