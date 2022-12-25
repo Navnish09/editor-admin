@@ -8,6 +8,7 @@ import { ModalComponent } from "../../components/Modal/Modal";
 import { SubmissionRecord } from "./models";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Animate } from "../../components/Animate/Animate";
 
 const CodeSnippet = ({ code, language }: { code: string, language?: string }) => {
 
@@ -28,7 +29,7 @@ const Main = () => {
   const [data, setData] = useState<Array<SubmissionRecord>>([]);
   const [selectedRows, setSelectedRows] = useState<SubmissionRecord>();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const { configs, columns } = tableConfigs;
 
@@ -54,7 +55,7 @@ const Main = () => {
    * Fetch all submissions from the API
    */
   useEffect(() => {
-    setLoading(true);
+    !loading && setLoading(true);
 
     (async () => {
       try {
@@ -69,7 +70,7 @@ const Main = () => {
   }, []);
 
   return (
-    <>
+    <Animate show>
       <ModalComponent
         isOpen={isModalOpen}
         size="lg"
@@ -91,7 +92,7 @@ const Main = () => {
           />
         </Col>
       </Row>
-    </>
+    </Animate>
   );
 };
 

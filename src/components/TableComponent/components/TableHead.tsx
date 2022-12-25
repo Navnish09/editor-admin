@@ -8,12 +8,12 @@ export const TableHead = ({ columns }: { columns: Column[] }) => {
       <tr>
         {columns.map((column, index) => (
           <th
-            style={{ 
+            style={{
               width: column.width || "auto",
               ...column.grow ? { flexGrow: 1 } : {},
             }}
             key={`${index}-${column.accessor}`}
-            className="border-0 text-uppercase font-medium">
+            className="border-0 font-medium">
             {column.Header}
           </th>
         ))}

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Container } from "reactstrap";
-
-import Main from "../views/Main/Main";
+import { Outlet } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import { Animate } from "../components/Animate/Animate";
 
 const FullLayout = () => {
   return (
@@ -20,7 +20,11 @@ const FullLayout = () => {
           <Header />
           {/********Middle Content**********/}
           <Container className="p-4 wrapper" fluid>
-            <Main />
+            <Suspense fallback={null}>
+              <Animate show={true}>
+                <Outlet />
+              </Animate>
+            </Suspense>
           </Container>
         </div>
       </div>

@@ -3,9 +3,9 @@ import { useRoutes } from "react-router-dom";
 import Themeroutes from "./routes/Router";
 
 const App = () => {
-  const routing = useRoutes(Themeroutes);
+  const element = useRoutes(Themeroutes);
 
-  return <div className="dark">{routing}</div>;
+  return <div>{element}</div>;
 };
 
 export default App;

@@ -1,5 +1,10 @@
 {
   "submissions": {
     "getSubmissions" : "/getSubmissions"
+  },
+  "questions": {
+    "getQuestions" : "/getQuestions",
+    "createQuestion" : "/createQuestion",
+    "deleteQuestion" : "/deleteQuestion"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "configs": {},
+  "columns": [
+    {
+      "Header": "ID",
+      "accessor": "_id",
+      "width": 250,
+      "grow": true
+    },
+    {
+      "Header": "Question",
+      "accessor": "question",
+      "grow": true
+    },
+    {
+      "Header": "Due Date",
+      "accessor": "dueDate",
+      "width": 150,
+      "grow": true
+    },
+    {
+      "Header": "Actions",
+      "accessor": "actions",
+      "width": 150
+    }
+  ]
+}

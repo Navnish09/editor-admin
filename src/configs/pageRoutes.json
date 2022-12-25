@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/",
+    "component": "Main",
+    "title": "Dashboard",
+    "icon": "bi bi-bar-chart-steps"
+  },
+  {
+    "path": "/create-question",
+    "component": "CreateQuestion",
+    "title": "Create Question",
+    "icon": "bi bi-file-earmark-plus"
+  }
+]

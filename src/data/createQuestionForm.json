@@ -1,0 +1,28 @@
+{
+  "id" : "CreateQuestion",
+  "fields" : [
+    {
+      "type" : "string",
+      "name" : "question",
+      "label" : "Question",
+      "placeholder" : "Enter your question here"
+    },
+    {
+      "type" : "textarea",
+      "name" : "description",
+      "label" : "Description",
+      "placeholder": "Enter your question here"
+    },
+    {
+      "type" : "date",
+      "name" : "dueDate",
+      "label" : "Due Date"
+    },
+    {
+      "type" : "select",
+      "name" : "language",
+      "label" : "Default Language",
+      "placeholder": "Select a language"
+    }
+  ]
+}

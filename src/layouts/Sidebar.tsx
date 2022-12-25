@@ -1,19 +1,10 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useMatch, useParams } from "react-router-dom";
 import { Button, Nav, NavItem } from "reactstrap";
 import Logo from "./Logo";
-
-const navigation = [
-  {
-    title: "Dashboard",
-    href: "/",
-    icon: "bi bi-bar-chart-steps",
-  }
-];
+import pageRoutes from "../configs/pageRoutes.json";
 
 const Sidebar = () => {
-  let location = useLocation();
-
   const showMobilemenu = () => {
     document.getElementById("sidebarArea")?.classList.toggle("showSidebar");
   };
@@ -32,19 +23,19 @@ const Sidebar = () => {
       </div>
       <div className="">
         <Nav vertical className="sidebarNav">
-          {navigation.map((navi, index) => (
+          {pageRoutes.map((route, index) => (
             <NavItem key={index} className="sidenav-bg">
-              <Link
-                to={navi.href}
-                className={
-                  location.pathname === navi.href
-                    ? "text-secondary nav-link py-3"
+              <NavLink
+                to={route.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "fw-bold text-secondary nav-link py-3"
                     : "nav-link text-secondary py-3"
                 }
               >
-                <i className={navi.icon}></i>
-                <span className="ms-3 d-inline-block">{navi.title}</span>
-              </Link>
+                <i className={route.icon}></i>
+                <span className="ms-3 d-inline-block">{route.title}</span>
+              </NavLink>
             </NavItem>
           ))}
         </Nav>
