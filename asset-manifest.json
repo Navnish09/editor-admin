@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/editor-admin/static/css/main.3829a68a.css",
-    "main.js": "/editor-admin/static/js/main.534ac9bd.js",
-    "static/js/583.4f40f1b4.chunk.js": "/editor-admin/static/js/583.4f40f1b4.chunk.js",
-    "static/js/726.dae5493a.chunk.js": "/editor-admin/static/js/726.dae5493a.chunk.js",
+    "main.css": "/editor-admin/static/css/main.55b86363.css",
+    "main.js": "/editor-admin/static/js/main.d6a7e565.js",
+    "static/js/690.edc4755d.chunk.js": "/editor-admin/static/js/690.edc4755d.chunk.js",
+    "static/js/625.4d1bfe7d.chunk.js": "/editor-admin/static/js/625.4d1bfe7d.chunk.js",
+    "static/js/453.0aa821cf.chunk.js": "/editor-admin/static/js/453.0aa821cf.chunk.js",
+    "static/js/463.f1fea54f.chunk.js": "/editor-admin/static/js/463.f1fea54f.chunk.js",
+    "static/js/475.15c7db3c.chunk.js": "/editor-admin/static/js/475.15c7db3c.chunk.js",
+    "static/js/658.6ee2e078.chunk.js": "/editor-admin/static/js/658.6ee2e078.chunk.js",
     "static/media/bootstrap-icons.woff?": "/editor-admin/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/editor-admin/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "index.html": "/editor-admin/index.html",
-    "main.3829a68a.css.map": "/editor-admin/static/css/main.3829a68a.css.map",
-    "main.534ac9bd.js.map": "/editor-admin/static/js/main.534ac9bd.js.map",
-    "583.4f40f1b4.chunk.js.map": "/editor-admin/static/js/583.4f40f1b4.chunk.js.map",
-    "726.dae5493a.chunk.js.map": "/editor-admin/static/js/726.dae5493a.chunk.js.map"
+    "main.55b86363.css.map": "/editor-admin/static/css/main.55b86363.css.map",
+    "main.d6a7e565.js.map": "/editor-admin/static/js/main.d6a7e565.js.map",
+    "690.edc4755d.chunk.js.map": "/editor-admin/static/js/690.edc4755d.chunk.js.map",
+    "625.4d1bfe7d.chunk.js.map": "/editor-admin/static/js/625.4d1bfe7d.chunk.js.map",
+    "453.0aa821cf.chunk.js.map": "/editor-admin/static/js/453.0aa821cf.chunk.js.map",
+    "463.f1fea54f.chunk.js.map": "/editor-admin/static/js/463.f1fea54f.chunk.js.map",
+    "475.15c7db3c.chunk.js.map": "/editor-admin/static/js/475.15c7db3c.chunk.js.map",
+    "658.6ee2e078.chunk.js.map": "/editor-admin/static/js/658.6ee2e078.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3829a68a.css",
-    "static/js/main.534ac9bd.js"
+    "static/css/main.55b86363.css",
+    "static/js/main.d6a7e565.js"
   ]
 }
