@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import App from './App';
 import { ROUTE_BASENAME } from './configs/constants';
@@ -13,8 +13,8 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     {/* TODO :-  Make sure to remove this one when the app is deployed to a root directory */}
-    <BrowserRouter basename={ROUTE_BASENAME}>
+    <HashRouter basename={ROUTE_BASENAME}>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
