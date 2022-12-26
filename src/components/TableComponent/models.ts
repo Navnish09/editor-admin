@@ -22,4 +22,5 @@ export type Props = {
   templates?: Record<string, Function>;
   configs?: Configs;
   loading?: boolean;
+  rowHover?:boolean
 }

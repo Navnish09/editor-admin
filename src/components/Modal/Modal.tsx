@@ -28,7 +28,7 @@ export const ModalComponent = ({
             <ModalFooter>
               {
                 footerButtons?.map((button) => (
-                  <Button color={button.type} onClick={button.onClick}>
+                  <Button {...button}>
                     {button.text}
                   </Button>
                 ))

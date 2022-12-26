@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 
-import { Animate, ModalComponent, TableComponent } from "components";
-import { STATIC_CONTENT } from "../../configs/constants";
-import questionTableConfigs from "../../data/questionsTableConfigs.json";
-import CreateQuestion from "./CreateQuestion";
 import { getQuestions } from "apis/questionApis";
+import questionTableConfigs from "data/questionsTableConfigs.json";
+import { Animate, ModalComponent, TableComponent } from "components";
+import { STATIC_CONTENT } from "configs/constants";
+import CreateQuestion from "./CreateQuestion";
 import { DeleteQuestionAction as DeleteAction } from "./Actions/DeleteQuestionAction";
 import { Question } from "./models";
 
