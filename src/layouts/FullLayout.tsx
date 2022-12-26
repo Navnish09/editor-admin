@@ -19,7 +19,7 @@ const FullLayout = () => {
           {/********header**********/}
           <Header />
           {/********Middle Content**********/}
-          <Container className="p-4 wrapper" fluid>
+          <Container className="py-4 px-5 wrapper" fluid>
             <Suspense fallback={null}>
               <Animate show={true}>
                 <Outlet />

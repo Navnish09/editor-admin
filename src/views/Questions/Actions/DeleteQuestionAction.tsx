@@ -48,13 +48,14 @@ export const DeleteQuestionAction = ({ row, onDelete }: Props) => {
       <ModalComponent
         isOpen={isOpen}
         size="md"
+        centered
         title={STATIC_CONTENT.confirm}
-        toggleModal={() => setIsOpen(prev => !prev)}
+        toggle={() => setIsOpen(prev => !prev)}
         content={<>Are you sure you want to delete this question?</>}
         footerButtons={footerButtons}
       />
 
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center justify-content-center">
         <span className="text-danger delete-Icon" onClick={() => setIsOpen(true)}>
           <i className="bi bi-trash3-fill"></i>
         </span>

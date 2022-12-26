@@ -1,8 +1,8 @@
 import React from "react";
-import { Props } from "../models";
+import { TableProps } from "../models";
 
 // Component for rendering the table body
-export const TableBody = ({ data, columns, templates }: Props) => {
+export const TableBody = ({ data, columns, templates }: TableProps) => {
   return (
     <tbody>
       {data.map((tdata, index) => {
@@ -17,6 +17,9 @@ export const TableBody = ({ data, columns, templates }: Props) => {
                   key={`${tdIndex}-${column}`} className="align-middle"
                   style={{
                     width: columns[tdIndex].width,
+                    minWidth : columns[tdIndex].minWidth || "auto",
+                    maxWidth : columns[tdIndex].maxWidth || "auto",
+                    textAlign: columns[tdIndex].align || "left",
                     ...columns[tdIndex].grow ? { flexGrow: 1 } : {},
                   }}>
                   {

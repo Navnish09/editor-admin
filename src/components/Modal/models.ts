@@ -3,9 +3,10 @@ import {ButtonProps} from "reactstrap";
 
 export type ModalProps = {
   isOpen: boolean;
-  toggleModal: () => void;
+  toggle: () => void;
   content: ReactElement,
   title?: string,
   footerButtons?: Array<ButtonProps>,
-  size?: "sm" | "md" | "lg" | "xl"
+  size?: "sm" | "md" | "lg" | "xl",
+  centered?: boolean,
 }

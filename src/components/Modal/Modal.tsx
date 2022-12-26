@@ -7,15 +7,20 @@ export const ModalComponent = ({
   content,
   title,
   footerButtons,
-  toggleModal,
-  size = "md"
+  toggle,
+  size = "md",
+  centered = false
 }: ModalProps) => {
   return (
     <div>
-      <Modal isOpen={isOpen} toggle={toggleModal} size={size} keyboard unmountOnClose>
+      <Modal
+        {...{ isOpen, toggle, size, centered }}
+        keyboard
+        unmountOnClose
+        >
         {
           title && (
-            <ModalHeader toggle={toggleModal}>{title}</ModalHeader>
+            <ModalHeader toggle={toggle}>{title}</ModalHeader>
           )
         }
 

@@ -3,7 +3,8 @@ import { Button } from "reactstrap";
 
 import { getQuestions } from "apis/questionApis";
 import questionTableConfigs from "data/questionsTableConfigs.json";
-import { Animate, ModalComponent, TableComponent } from "components";
+import languages from "data/languageOptions.json";
+import { Animate, ModalComponent, TableComponent, Column } from "components";
 import { STATIC_CONTENT } from "configs/constants";
 import CreateQuestion from "./CreateQuestion";
 import { DeleteQuestionAction as DeleteAction } from "./Actions/DeleteQuestionAction";
@@ -18,7 +19,8 @@ export const Questions = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const templates = {
-    actions: (row: Question) => <DeleteAction row={row} onDelete={() => setRefetch(prev => !prev)} />
+    actions: (row: Question) => <DeleteAction row={row} onDelete={() => setRefetch(prev => !prev)} />,
+    language: (row: Question) => languages.find(lang => lang.id === +row.language)?.label
   }
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export const Questions = () => {
       <ModalComponent
         isOpen={isOpen}
         size="lg"
-        toggleModal={() => setIsOpen(prev => !prev)}
+        toggle={() => setIsOpen(prev => !prev)}
         title={STATIC_CONTENT.create_new_question}
         content={<CreateQuestion onCreated={() => setRefetch(prev=>!prev)} />}
       />
@@ -54,7 +56,7 @@ export const Questions = () => {
 
       <TableComponent
         {...{
-          columns,
+          columns: columns as Column[],
           configs,
           data,
           templates,

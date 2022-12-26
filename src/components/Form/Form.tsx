@@ -67,7 +67,7 @@ export const Form = forwardRef(({
 
                       {
                         type === "select" ? inputRest.options?.map((option: Option) => (
-                          <option key={option.id} value={option.value}>{option.label}</option>
+                          <option key={option.id} value={`${option.id}`}>{option.label}</option>
                         )) : null
                       }
                     </Input>

@@ -10,6 +10,7 @@ export const TableHead = ({ columns }: { columns: Column[] }) => {
           <th
             style={{
               width: column.width || "auto",
+              textAlign : column.align || "left",
               ...column.grow ? { flexGrow: 1 } : {},
             }}
             key={`${index}-${column.accessor}`}

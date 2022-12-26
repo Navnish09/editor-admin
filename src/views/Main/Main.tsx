@@ -9,6 +9,7 @@ import { SubmissionRecord } from "./models";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Animate } from "../../components/Animate/Animate";
+import { STATIC_CONTENT } from "configs/constants";
 
 const CodeSnippet = ({ code, language }: { code: string, language?: string }) => {
 
@@ -75,8 +76,8 @@ const Main = () => {
         isOpen={isModalOpen}
         size="lg"
         content={<CodeSnippet code={selectedRows?.code || ""} language={selectedRows?.language}  />}
-        title="Submitted code"
-        toggleModal={() => setIsModalOpen(false)}
+        title={STATIC_CONTENT.submitted_code}
+        toggle={() => setIsModalOpen(false)}
       />
 
       <Row>

@@ -1,10 +1,12 @@
 {
-  "configs": {},
+  "configs": {
+    "noDataMessage" : "No questions found"
+  },
   "columns": [
     {
       "Header": "ID",
       "accessor": "_id",
-      "width": 250,
+      "width": 230,
       "grow": true
     },
     {
@@ -15,13 +17,19 @@
     {
       "Header": "Due Date",
       "accessor": "dueDate",
-      "width": 150,
+      "width": 120,
+      "grow": true
+    },
+    {
+      "Header": "Language",
+      "accessor": "language",
+      "width": 250,
       "grow": true
     },
     {
       "Header": "Actions",
       "accessor": "actions",
-      "width": 150
+      "align" : "center"
     }
   ]
 }
