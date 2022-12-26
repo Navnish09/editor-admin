@@ -12,10 +12,10 @@ import { createQuestion } from "apis/questionApis";
 import { STATIC_CONTENT } from "configs/constants";
 
 type Props = {
-  onCreated: () => void
+  onCreate: () => void
 }
 
-export const CreateQuestion = ({ onCreated }: Props) => {
+export const CreateQuestion = ({ onCreate }: Props) => {
   const [isValid, setIsValid] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [questionId, setQuestionId] = useState<string>("");
@@ -43,7 +43,7 @@ export const CreateQuestion = ({ onCreated }: Props) => {
 
         // Reset form after successful submission
         formRef.current?.reset();
-        onCreated();
+        onCreate();
       } catch (error) {
         console.log(error);
       } finally {

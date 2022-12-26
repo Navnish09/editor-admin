@@ -43,7 +43,7 @@ export const Questions = () => {
         size="lg"
         toggle={() => setIsOpen(prev => !prev)}
         title={STATIC_CONTENT.create_new_question}
-        content={<CreateQuestion onCreated={() => setRefetch(prev=>!prev)} />}
+        content={<CreateQuestion onCreate={() => setRefetch(prev => !prev)} />}
       />
 
       <div className="d-flex flex-row justify-content-between align-items-center mb-3">

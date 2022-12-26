@@ -21,7 +21,7 @@ const FullLayout = () => {
           {/********Middle Content**********/}
           <Container className="py-4 px-5 wrapper" fluid>
             <Suspense fallback={null}>
-              <Animate show={true}>
+              <Animate show>
                 <Outlet />
               </Animate>
             </Suspense>
