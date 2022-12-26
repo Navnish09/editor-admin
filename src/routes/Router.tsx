@@ -12,7 +12,7 @@ const componentsMap = {
 }
 
 /*****Routes******/
-const ThemeRoutes = [
+const Routes = [
   {
     path: "/",
     element: <FullLayout />,
@@ -28,4 +28,4 @@ const ThemeRoutes = [
   }
 ];
 
-export default ThemeRoutes;
+export default Routes;

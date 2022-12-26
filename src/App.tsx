@@ -1,9 +1,9 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import Themeroutes from "./routes/Router";
+import Routes from "./routes/Router";
 
 const App = () => {
-  const element = useRoutes(Themeroutes);
+  const element = useRoutes(Routes);
 
   return <div>{element}</div>;
 };
