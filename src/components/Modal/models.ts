@@ -1,10 +1,10 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import {ButtonProps} from "reactstrap";
 
 export type ModalProps = {
   isOpen: boolean;
   toggle: () => void;
-  content: ReactElement,
+  content: ReactNode,
   title?: string,
   footerButtons?: Array<ButtonProps>,
   size?: "sm" | "md" | "lg" | "xl",

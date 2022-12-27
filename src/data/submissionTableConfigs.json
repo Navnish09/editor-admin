@@ -7,31 +7,31 @@
     {
       "Header": "ID",
       "accessor": "_id",
-      "width": 300,
-      "grow" : true
+      "width": 150
     },
     {
       "Header": "Name",
       "accessor": "name",
-      "width": 200,
+      "width": 250,
       "grow": true
     },
     {
       "Header": "Email",
       "accessor": "email",
-      "width": 250,
+      "width": 300,
       "grow": true
     },
     {
       "Header": "Code",
       "accessor": "code",
-      "width": 100,
+      "width": 60,
       "grow": true
     },
     {
       "Header" : "Actions",
       "accessor" : "actions",
-      "width": 95
+      "width": 95,
+      "align": "center"
     }
   ]
 }

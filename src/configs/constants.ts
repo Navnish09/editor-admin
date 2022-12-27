@@ -7,5 +7,7 @@ export const STATIC_CONTENT = {
   create_new_question : "Create New Question",
   no_questions : "No Questions",
   submitted_code : "Submitted Code",
+  submission_delete_confirm : "Are you sure you want to delete this submission?",
   question_created : "Question created",
+  question_delete_confirm : "Are you sure you want to delete this question?",
 }

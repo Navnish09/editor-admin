@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Button } from "reactstrap";
-
-import { TableComponent } from "../../components/TableComponent/TableComponent";
-import { getAllSubmissions } from "../../apis/submissionApis";
-import tableConfigs from "../../data/submissionTableConfigs.json";
-import { ModalComponent } from "../../components/Modal/Modal";
-import { SubmissionRecord } from "./models";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Animate } from "../../components/Animate/Animate";
+
+import { getAllSubmissions } from "apis/submissionApis";
+import { TableComponent, ModalComponent, Animate, Column } from "components";
 import { STATIC_CONTENT } from "configs/constants";
+import tableConfigs from "data/submissionTableConfigs.json";
+import { SubmissionRecord } from "./models";
+import { DeleteSubmissionAction } from "./Actions/DeleteSubmissionAction";
 
 const CodeSnippet = ({ code, language }: { code: string, language?: string }) => {
 
@@ -26,14 +25,15 @@ const CodeSnippet = ({ code, language }: { code: string, language?: string }) =>
   )
 }
 
-const Main = () => {
+export const Submissions = () => {
   const [data, setData] = useState<Array<SubmissionRecord>>([]);
   const [selectedRows, setSelectedRows] = useState<SubmissionRecord>();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [refetch, setRefetch] = useState(false);
 
   const { configs, columns } = tableConfigs;
-
+  
   const handleViewCode = (row: SubmissionRecord) => {
     setIsModalOpen(true);
     setSelectedRows(row)
@@ -49,7 +49,7 @@ const Main = () => {
         </Button>
       )
     },
-    actions: () => "- - - - - - -"
+    actions: (row: SubmissionRecord) => <DeleteSubmissionAction row={row} onDelete={() => setRefetch(prev => !prev)} />
   }
 
   /**
@@ -68,7 +68,7 @@ const Main = () => {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [refetch]);
 
   return (
     <Animate show>
@@ -85,7 +85,7 @@ const Main = () => {
           <TableComponent
             {...{
               configs,
-              columns,
+              columns : columns as Column[],
               data,
               templates,
               loading
@@ -97,4 +97,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Submissions;

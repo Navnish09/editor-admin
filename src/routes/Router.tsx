@@ -3,11 +3,11 @@ import pageRoutes from "../configs/pageRoutes.json";
 
 /****Layouts*****/
 const FullLayout = lazy(() => import("../layouts/FullLayout"));
-const Main = lazy(() => import("../views/Main/Main"));
+const Submissions = lazy(() => import("../views/Submissions"));
 const CreateQuestion = lazy(() => import("../views/Questions"));
 
 const componentsMap = {
-  Main,
+  Submissions,
   CreateQuestion
 }
 

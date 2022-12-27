@@ -1,4 +1,3 @@
-import { STATIC_CONTENT } from "configs/constants";
 import React, { ReactNode } from "react";
 import { Card, CardBody, Spinner, Table } from "reactstrap";
 import { TableBody, TableHead, TableInfo } from "./components";
@@ -25,18 +24,26 @@ export const TableComponent = ({ columns, data, templates, configs, loading, row
   return (
     <>
       <Card>
-        <CardBody>
+        <CardBody className="overflow-auto">
           <TableInfo title={configs?.title || ""} subtitle={configs?.subtitle || ""} />
 
-          <Table className={`no-wrap ${isInfoAvailable ? `mt-3` : `mb-0`} align-middle`} responsive borderless hover={rowHover} >
+          <Table
+            className={`no-wrap ${isInfoAvailable ? `mt-3` : `mb-0`} align-middle`}
+            borderless
+            hover={rowHover} >
 
             {!loading ? (
               <>
                 <TableHead columns={columns} />
-                {
-                  // Render the table body only if the data is available
+
+                { // Render the table body only if the data is available
                   data?.length > 0 && (
-                    <TableBody {...{ data, columns, templates, loading }} />
+                    <TableBody {...{
+                      data,
+                      columns,
+                      templates,
+                      loading
+                    }} />
                   )
                 }
               </>
@@ -47,11 +54,9 @@ export const TableComponent = ({ columns, data, templates, configs, loading, row
         </CardBody>
       </Card>
 
-      {
-        data.length === 0 && !loading && (
-          <EmptyMessage message={configs?.noDataMessage} />
-        )
-      }
+      {data.length === 0 && !loading && (
+        <EmptyMessage message={configs?.noDataMessage} />
+      )}
     </>
 
   );

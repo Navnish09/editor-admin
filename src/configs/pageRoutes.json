@@ -1,8 +1,8 @@
 [
   {
     "path": "/",
-    "component": "Main",
-    "title": "Dashboard",
+    "component": "Submissions",
+    "title": "Submissions",
     "icon": "bi bi-bar-chart-steps"
   },
   {

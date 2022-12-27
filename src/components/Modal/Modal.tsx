@@ -33,7 +33,7 @@ export const ModalComponent = ({
             <ModalFooter>
               {
                 footerButtons?.map((button) => (
-                  <Button {...button}>
+                  <Button key={button.text} {...button}>
                     {button.text}
                   </Button>
                 ))

@@ -1,6 +1,7 @@
 {
   "submissions": {
-    "getSubmissions" : "/getSubmissions"
+    "getSubmissions" : "/getSubmissions",
+    "deleteSubmission" : "/deleteSubmission?id={{id}}"
   },
   "questions": {
     "getQuestions" : "/getQuestions",
